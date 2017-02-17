@@ -8,11 +8,8 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "enzyme": "^2.7.1",
     "material-ui": "^0.17.0",
     "react": "^15.4.1",
-    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "react-tap-event-plugin": "^2.0.1"
   },
