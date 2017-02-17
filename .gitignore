@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+ui/node_modules
+api/node_modules
+
+# testing
+ui/coverage
+
+# production
+ui/build
+
+# misc
+ui/.DS_Store
+ui/.env
+ui/npm-debug.log
