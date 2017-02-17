@@ -2,10 +2,10 @@
 
 ## Intro
 
-Son dos carpetas: `api` y `ui`. La carpeta `api` contiene una aplicacion que devuelve una lista de usuarios. 
+Son dos carpetas: `api` y `ui`. La carpeta `api` contiene una aplicación que devuelve una lista de usuarios. 
 
 
-##Descripcion de los componentes
+##Descripción de los componentes
 
 ###App
 
@@ -15,12 +15,12 @@ Tiene propiedades para determinar la cantidad de usuarios a pedir y el largo de 
 ###UserSearchModal
 
 Este componente se encarga de mostrar/ocultar el modal, en funcion de lo que el usuario elija.
-Para los botones y el modal se utilizan componentes de la libreria 'Material UI'
+Para los botones y el modal se utilizan componentes de la librería `Material UI`
 
 ###AutocompleteUserName
 
 Es un textbox que despliega una lista de sugeridos en funcion del input que ingresa el usuario.
-Se construyo utilizando el componente 'AutoComplete' de la libreria 'Material UI', al que se le setean las siguientes propiedades:
+Se construyó utilizando el componente `AutoComplete` de la libreria `Material UI`, al que se le setean las siguientes propiedades:
 
 * hintText: texto que aparece antes de que el usuario ingrese la busqueda
 
