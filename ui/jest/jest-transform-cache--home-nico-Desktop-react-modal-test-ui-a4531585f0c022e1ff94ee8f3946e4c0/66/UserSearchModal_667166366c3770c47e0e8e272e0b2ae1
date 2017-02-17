@@ -1,0 +1,52 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/home/nico/Desktop/react-modal-test/ui/src/UserSearchModal.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactBootstrap = require('react-bootstrap'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+class UserSearchModal extends /* istanbul ignore next */_react.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showModal: false };
+
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
+  }
+
+  open() {
+    this.setState({ showModal: true });
+  }
+
+  close() {
+    this.setState({ showModal: false });
+  }
+
+  render() {
+
+    return (
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'text-center', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Button, /* istanbul ignore next */{
+              bsStyle: 'primary',
+              bsSize: 'large',
+              onClick: this.open, __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: this }, /* istanbul ignore next */'Search for users')),
+
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Modal, /* istanbul ignore next */{ show: this.state.showModal, onHide: this.close, container: this, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Modal.Header, /* istanbul ignore next */{ closeButton: /* istanbul ignore next */true, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Modal.Title, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }, this.props.title)),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Modal.Body, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+            this.props.children),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Modal.Footer, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactBootstrap.Button, /* istanbul ignore next */{ onClick: this.close, __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this }, /* istanbul ignore next */'Close')))));
+
+
+
+
+  }} /* istanbul ignore next */exports.default = UserSearchModal;

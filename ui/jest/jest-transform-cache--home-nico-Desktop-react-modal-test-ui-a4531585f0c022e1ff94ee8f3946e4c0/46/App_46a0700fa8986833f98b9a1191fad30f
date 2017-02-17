@@ -1,0 +1,81 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/home/nico/Desktop/react-modal-test/ui/src/App.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_AutocompleteUserName = require('./AutocompleteUserName.js'); /* istanbul ignore next */var _AutocompleteUserName2 = _interopRequireDefault(_AutocompleteUserName);
+var /* istanbul ignore next */_UserSearchModal = require('./UserSearchModal.js'); /* istanbul ignore next */var _UserSearchModal2 = _interopRequireDefault(_UserSearchModal);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+
+class App extends /* istanbul ignore next */_react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [],
+      loaded: false,
+      error: false };
+
+  }
+
+  dataLoaded() {
+    this.setState({
+      loaded: true,
+      error: false });
+
+  }
+
+  errorFetchingData() {
+    this.setState({
+      loaded: false,
+      error: true });
+
+  }
+
+  componentWillMount() {
+    const url = '/users/' + this.props.count;
+    fetch(url).
+    then(response => {
+      if (response.ok) {
+        this.dataLoaded();
+        return response.json();
+      } else {
+        throw new Error('Network problem was found');
+      }
+    }).
+    then(json => {
+      this.setState({
+        users: json });
+
+      this.dataLoaded();
+    }).
+    catch(error => {
+      this.errorFetchingData();
+    });
+  }
+
+  render() {
+    const loaded = this.state.loaded;
+    const error = this.state.error;
+    let content;
+
+    if (error)
+    content = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'alert alert-danger', role: 'alert', __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'strong', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 59 }, __self: this }, /* istanbul ignore next */'Oh snap!'), /* istanbul ignore next */' There was an error processing your request. Please try again later.');else
+
+    if (loaded)
+    content = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_UserSearchModal2.default, /* istanbul ignore next */{ title: 'User Search', __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AutocompleteUserName2.default, /* istanbul ignore next */{
+        dataSource: this.state.users,
+        maxSearchResults: this.props.maxSearchResults, __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this }));else
+
+
+
+    content = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 69 }, __self: this }, /* istanbul ignore next */'Loading...');
+
+
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 74 }, __self: this },
+        content));
+
+
+  }} /* istanbul ignore next */exports.default =
+
+
+App;

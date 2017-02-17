@@ -1,0 +1,13 @@
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/nico/Desktop/react-modal-test/ui/src/AutocompleteUserName.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactDom = require('react-dom'); /* istanbul ignore next */var _reactDom2 = _interopRequireDefault(_reactDom);
+var /* istanbul ignore next */_AutocompleteUserName = require('./AutocompleteUserName'); /* istanbul ignore next */var _AutocompleteUserName2 = _interopRequireDefault(_AutocompleteUserName);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const users = [
+{ name: 'value1' },
+{ name: 'value2' }];
+
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  /* istanbul ignore next */_reactDom2.default.render( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AutocompleteUserName2.default, /* istanbul ignore next */{ dataSoure: users, maxSearchResults: 2, __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined }), div);
+});
