@@ -2,8 +2,9 @@
 
 ## Intro
 
-Son dos carpetas: `api` y `ui`. La carpeta `api` contiene una aplicación que devuelve una lista de usuarios. 
-
+Son dos carpetas: `api` y `ui`. 
+`api` contiene la aplicación que devuelve una lista de usuarios. 
+`ui` contiene la aplicación web solicitada.
 
 ##Descripción de los componentes
 
