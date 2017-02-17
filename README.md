@@ -22,15 +22,15 @@ Para los botones y el modal se utilizan componentes de la libreria 'Material UI'
 Es un textbox que despliega una lista de sugeridos en funcion del input que ingresa el usuario.
 Se construyo utilizando el componente 'AutoComplete' de la libreria 'Material UI', al que se le setean las siguientes propiedades:
 
-*hintText: texto que aparece antes de que el usuario ingrese la busqueda
+* hintText: texto que aparece antes de que el usuario ingrese la busqueda
 
-*filter: algoritmo utilizado para realizar la busqueda
+* filter: algoritmo utilizado para realizar la busqueda
 Se utiliza 'fuzzyFilter', que permite realizar una busqueda mas fluida y menos estricta
 
-*dataSource: la lista de datos a filtrar
+* dataSource: la lista de datos a filtrar
 La obtiene en sus propiedades
 
-*dataSourceConfig: especifica clave y valor de los datos a filtrar
+* dataSourceConfig: especifica clave y valor de los datos a filtrar
 En este caso tanto la clave como el valor es el nombre del usuario
 
-*maxSearchResults: limita el largo de la lista desplegada
+* maxSearchResults: limita el largo de la lista desplegada
